@@ -1,0 +1,31 @@
+- route:
+    id: cme-incoming
+    nodePrefixId: route-04b
+    from:
+      id: from-ece5
+      uri: sftp
+      steps:
+        - choice:
+            id: choice-a23a
+            when:
+              - id: when-e78c
+                expression:
+                  simple:
+                    id: simple-db6a
+                steps:
+                  - to:
+                      id: to-348a
+                      uri: sftp
+              - id: when-cbd9
+                expression:
+                  simple:
+                    id: simple-c75a
+                steps:
+                  - to:
+                      id: to-eeee
+                      uri: sftp
+            otherwise:
+              id: otherwise-93d5
+        - to:
+            id: to-9cc1
+            uri: aws2-s3
