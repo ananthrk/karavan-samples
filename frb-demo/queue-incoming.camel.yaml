@@ -1,11 +1,19 @@
+- beans:
+    - constructors: {}
 - route:
     id: route-4a4a
     nodePrefixId: route-a8a
     from:
       id: from-e266
       uri: activemq
+      parameters:
+        destinationName: localhost:8000
       steps:
+        - delay:
+            id: delay-7d4b
+            expression:
+              constant:
+                id: constant-2ddc
+                expression: '10'
         - bean:
             id: bean-eecb
-- beans:
-    - constructors: {}
