@@ -1,0 +1,11 @@
+- route:
+    id: route-4a4a
+    nodePrefixId: route-a8a
+    from:
+      id: from-e266
+      uri: activemq
+      steps:
+        - bean:
+            id: bean-eecb
+- beans:
+    - constructors: {}
